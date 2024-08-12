@@ -396,7 +396,7 @@ class MusicInjector {
       }
 
       /* Find the zseq file */
-      const zseqFiles = musicZip.file(/\.zseq$/);
+      const zseqFiles = musicZip.file(/\.seq$|\.aseq$|\.zseq$/);
       if (zseqFiles.length !== 1) {
         this.monitor.warn(`Skipped music file ${f.name}: multiple sequence files`);
         continue;
